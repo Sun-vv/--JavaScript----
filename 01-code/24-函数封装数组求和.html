@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //封装函数函数
+    function getArrSum(arr) {
+      let sum = 0;
+      for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+      }
+      console.log(sum);
+    }
+    getArrSum([1, 2, 3, 4, 5]);
+
+    //求n~m的和
+    function getSum(start = 0, end = 0) {
+      let sum = 0;
+      for (let i = start; i <= end; i++) {
+        sum += i;
+      }
+      console.log(sum);
+    }
+    let num1 = +prompt("请输入起始数字");
+    let num2 = +prompt("请输入结束数字");
+    getSum(num1, num2);//实参可以是变量
+  </script>
+</body>
+
+</html>

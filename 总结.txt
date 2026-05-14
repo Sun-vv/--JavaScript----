@@ -1,0 +1,784 @@
+分号在 JavaScript 中的主要作用是什么？
+标记语句的结束。
+
+const 不能被重新赋值或重新声明。let 可以重新赋值，但不能重新声明
+
+字符串一旦创建，就不能直接更改其字符。
+
+字符串插值在模板字面量中的用途是什么？
+直接在字符串中插入变量和表达式。
+
+如果在字符串中找不到子字符串，indexOf 方法会返回什么？-1
+
+在本例中，indexOf() 将返回什么？-1
+const str = "I am learning JavaScript.";
+str.indexOf("Javascript");
+
+includes() 方法：该方法用于检查字符串是否包含特定子字符串。 
+如果在字符串中找到子字符串，该方法返回 true。 否则，返回 false。
+
+toUpperCase() 方法将所有字符转换为大写字母，并返回一个包含所有大写字母的新字符串
+
+toLowerCase() 方法会将字符串中的所有字符转换为小写。 
+当需要对输入进行标准化时，例如比较用户提供的文本或进行大小写不敏感检查时，这很有帮助。
+
+trim() 方法是删除字符串首尾空白的最常用方法。
+let message = "   Hello!   ";
+console.log(message); // "   Hello!   "
+let trimmedMessage = message.trim();
+
+trimStart() 删除字符串开头（或起始）的空白。
+trimEnd() 删除字符串末尾的空白
+
+JavaScript 中的 replace() 
+方法允许你在字串中查找指定的值
+（例如单词或字符）并将其替换为另一个值。该方法返回一个带有替换的新字串，
+并且保持原字串不变，因为 JavaScript 字串是不可变的。
+string.replace(searchValue, newValue);
+
+
+repeat() 方法可以简化涉及字符串重复的任务，使代码更加简洁易读。
+无论是生成重复的文本模式还是填充字符空间，repeat() 都能让你免于编写循环或更复杂的代码。
+你不仅限于直接传入数字到 repeat() 方法。你也可以传入保存数字值的变量。
+let count = 4;
+let word = "Test";
+let repeatedWord = word.repeat(count);
+console.log(repeatedWord); // TestTestTestTest
+
+在 "love ".repeat(3) 方法末尾，链式调用 trimEnd() 方法。你可以这样链式调用方法：
+示例代码: .firstMethod().secondMethod()
+
+________________________________
+
+处理数字与算数运算符
+
+如果你对布尔值（true 或 false）执行算术操作会怎样？让我们看看会发生什么。
+JavaScript 在数学操作中将布尔值视为数字：true 变为 1，false 变为 0。
+
+指数运算符也是从右到左结合的：
+const result = 2 ** 3 ** 2;
+console.log(result); // 512
+
+
+为什么在 JavaScript 中使用严格相等（===）而不是常规相等（==）是个好主意？
+它同时检查值和类型，提供更可预测的结果。
+
+在 JavaScript 中使用常规相等（==）时会发生什么？
+会做类型转换，在比较值之前将其转换为相同的类型。
+
+
+空值合并（??）运算符有什么作用？
+当第一个值为 null 或 undefined 时，返回第二个值
+
+生成两个值之间随机整数的公式如下：
+Math.floor(Math.random() * (maximum - minimum) + minimum);
+你应在 1 到 5（包括 5）之间选择一个随机数，并将其赋值给变量 randomNumber 
+const randomNumber = Math.floor(Math.random() * 5) + 1;
+
+以下哪项能正确检查一个值是否恰好是 NaN？
+Number.isNaN(value)
+
+NaN === NaN 的结果是什么？
+false
+
+
+让我们从 parseFloat() 开始。 该方法解析字符串参数并返回浮点数。 
+它的设计目的是从字符串开头提取数字，即使字符串后面包含非数字字符
+console.log(parseFloat("3.14"));     // 3.14
+console.log(parseFloat("3.14 abc")); // 3.14
+console.log(parseFloat("3.14.5"));   // 3.14
+console.log(parseFloat("abc 3.14")); // NaN
+
+而 parseInt() 会解析一个字符串参数并返回一个整数
+console.log(parseInt("42"));       // 42
+console.log(parseInt("42px"));     // 42
+console.log(parseInt("3.14"));     // 3
+console.log(parseInt("abc123"));   // NaN
+
+console.log(parseInt("10.99"));    //10
+
+
+.toFixed() 返回的是字符串，而不是数字。 
+这是因为该方法主要用于格式化数字以便显示，而不是进一步计算。
+.toFixed() 而不带参数，默认为 0 位小数
+console.log((3.14159).toFixed(3));  // "3.142"
+console.log((3.14449).toFixed(3));  // "3.144"
+console.log((3.14550).toFixed(3));  // "3.146"
+
+
+console.log(5 == '5');   //返回true
+
+当变量已被声明但尚未赋值时，它就是 undefined 变量。
+null 和 undefined 都用来表示没有值
+
+if (1) {
+  console.log("True!");
+}   //打印True!
+
+
+布尔值函数
+// 定义满足用户故事要求的 boowho 函数
+function booWho(value) {
+  // 使用 typeof 检查是否为布尔原语（true 或 false）
+  return typeof value === 'boolean';
+}
+
+// 若测试用例调用的是 boolean，则将其指向 boowho
+const boolean = booWho;
+
+
+------------
+创建一个电子邮件掩码器
+1.获取字符串中某个字母的索引号位置 email.indexOf('@')  如果值为-1，则没有找到
+2.获取字符串中某个片段 email.slice(start,last)
+3.从某个位置开始获取字符串 email.slice(start)
+4.获取字符串第一个字符 email[0]
+5.重复某个字符 "*".repeat(数字)
+function maskEmail(email){
+  //1.
+  const atIndex = email.indexOf('@');
+  if(atIndex === -1){
+    return email;
+  }
+
+  const userId = email.slice(0,atIndex);  //2.
+  const usermain = email.slice(atIndex);  //3.
+
+  if(userId <= 2){
+    return email;
+  }
+
+
+  const first = userId[0];  //4.
+  const last = userId[userId.length - 1]
+  const stars = "*".repeat(userId.length - 2)  //5.
+
+  return first +  stars + last + usermain;
+
+}
+---------------
+验证字符串结尾相同
+string1.slice(-string2.length) === string2;
+
+
+以下函数将返回什么？
+function exampleFunction() {
+  return "Hello";
+  return "World!";
+}; //"Hello"
+
+
+下面代码的结果是什么？
+const sum = (num1, num2) => num1 + num2
+console.log(sum(0, 0) + num2); 
+错误信息提示 num2 未定义
+
+_________________________________
+数组
+
+push() 方法用于在数组末尾添加一个或多个元素。 
+push() 方法的返回值是数组的新长度。
+const fruits = ["apple", "banana"];
+const newLength = fruits.push("orange");
+console.log(newLength); // 3
+console.log(fruits); // ["apple", "banana", "orange"]
+
+
+pop() 方法从数组中删除最后一个元素并返回该元素。
+let fruits = ["apple", "banana", "orange"];
+let lastFruit = fruits.pop();
+console.log(fruits); // ["apple", "banana"]
+console.log(lastFruit); // "orange"
+
+
+unshift() 方法将一个或多个元素添加到数组的开头，并返回其新长度
+let numbers = [2, 3];
+let newLength = numbers.unshift(1);
+console.log(numbers); // [1, 2, 3]
+console.log(newLength); // 3
+
+
+shift() 方法从数组中移除第一个元素并返回该元素
+let colors = ["red", "green", "blue"];
+let firstColor = colors.shift();
+console.log(colors); // ["green", "blue"]
+console.log(firstColor); // "red"
+
+---
+数组解构
+在处理数组和返回多个值的函数时使用
+let fruits = ["apple", "banana", "orange"];
+let [first, second, third] = fruits;
+console.log(first);  // "apple"
+console.log(second); // "banana"
+console.log(third);  // "orange"
+
+数组解构还允许你跳过不需要的元素：
+let colors = ["red", "green", "blue", "yellow"];
+let [firstColor, , thirdColor] = colors;
+console.log(firstColor); // "red"
+console.log(thirdColor); // "blue"
+
+现在，让我们来讨论剩余语法，即用三个点表示的语法（...）。 
+它允许你将数组中尚未被解构的剩余元素收集到一个新数组中
+let fruits = ["apple", "banana", "orange", "mango", "kiwi"];
+let [first, second, ...rest] = fruits;
+console.log(first);  // "apple"
+console.log(second); // "banana"
+console.log(rest);   // ["orange", "mango", "kiwi"]
+
+-----
+反转字符串
+第一步是将其转换为单个字符的数组
+
+使用 split() 方法来实现这一功能：
+let str = "hello";
+let charArray = str.split("");
+console.log(charArray); // ["h", "e", "l", "l", "o"]
+
+reverse()方法是一个数组方法，用于在原处反转数组
+let charArray = ["h", "e", "l", "l", "o"];
+charArray.reverse();
+console.log(charArray); // ["o", "l", "l", "e", "h"]
+
+将反转的字符数组转换回字符串。 我们可以使用 join() 方法
+let reversedArray = ["o", "l", "l", "e", "h"];
+let reversedString = reversedArray.join("");
+console.log(reversedString); // "olleh"
+
+如果数组中有元素，则将字串 Menu items: [Lunch Item], [Lunch Item]... 记录到控制台，
+其中每个 [Lunch item] 是数组中的一个元素，按顺序排列。
+function showLunchMenu(arr){
+  if(arr.length === 0){
+    console.log("The menu is empty.")
+  }else {
+        console.log("Menu items: " + arr.join(", "))
+    }
+}
+
+
+-----
+indexOf
+
+indexOf() 查找某个特定元素在数组中首次出现的索引。
+如果找不到该元素，则返回 -1
+let fruits = ["apple", "banana", "orange", "banana"];
+let index = fruits.indexOf("banana");
+console.log(index); // 1
+
+如果要在特定索引号之后开始查找项目，
+可以像本例一样传递第二个参数
+let colors = ["red", "green", "blue", "yellow", "green"];
+let index = colors.indexOf("green", 3);
+console.log(index); // 4
+
+---
+数组中间添加和删除元素、
+
+删除元素
+let fruits = ["apple", "banana", "orange", "mango", "kiwi"];
+let removed = fruits.splice(2, 2);
+console.log(fruits);  // ["apple", "banana", "kiwi"]
+console.log(removed); // ["orange", "mango"]
+
+添加元素
+let colors = ["red", "green", "blue"];
+colors.splice(1, 0, "yellow", "purple");
+console.log(colors); // ["red", "yellow", "purple", "green", "blue"]
+从索引 1 开始，删除 0 个元素，并插入 yellow 和 purple
+
+同时和删除和添加元素
+let numbers = [1, 2, 3, 4, 5];
+numbers.splice(1, 2, 6, 7, 8);
+console.log(numbers); // [1, 6, 7, 8, 4, 5]
+splice(1, 2, 6, 7, 8) 从索引 1 开始，删除 2 个元素（2 和 3），并插入 6、7 和 8。
+
+使用 splice() 删除所有元素
+let array = [1, 2, 3, 4, 5];
+array.splice(0);
+console.log(array); // []
+
+----
+检查数组是否含有特定值
+
+includes() 方法在需要快速验证数组中是否存在元素而不需要知道其确切位置
+let fruits = ["apple", "banana", "orange", "mango"];
+console.log(fruits.includes("banana")); // true
+console.log(fruits.includes("grape"));  // false
+
+可以接受第二个参数
+let numbers = [10, 20, 30, 40, 50, 30, 60];
+console.log(numbers.includes(30, 3)); // true
+console.log(numbers.includes(30, 4)); // true
+在第一个 console.log 中，我们从索引 3 开始查找数字 30。 
+
+----
+数组的浅拷贝
+浅拷贝在你需要修改顶层结构时非常有用，
+例如为你的数组添加、移除或重新排序元素，而不修改原始数组或内部数组。
+
+concat()合并两个或多个数组来创建一个新数组
+const originalArray = [1, 2, 3];
+const copyArray = [].concat(originalArray);
+console.log(copyArray); // [1, 2, 3]
+console.log(copyArray === originalArray); // false
+
+slice() 方法。 
+在不带参数的情况下，slice() 返回整个数组的浅拷贝
+const originalArray = [1, 2, 3];
+const copyArray = originalArray.slice();
+console.log(copyArray); // [1, 2, 3]
+console.log(copyArray === originalArray); // false
+
+ES6 中引入的展开运算符（...）提供了另一种创建数组浅拷贝的简洁方法
+const originalArray = [1, 2, 3];
+const copyArray = [...originalArray];
+console.log(copyArray); // [1, 2, 3]
+console.log(copyArray === originalArray); // false
+
+
+________________________________________
+对象
+你可以将一个对象视为一个容器，里面保存着各种信息，就像文件柜保存着不同的文件夹和文档一样。
+访问对象属性有两种主要方式：点符号和方括弧符号。
+
+const person = {
+  name: "Alice",
+  age: 30,
+  city: "New York"
+};
+-----
+点符号
+console.log(person.name);  // Alice
+console.log(person.age);   // 30
+
+-----
+方括号
+console.log(person["name"]); // Alice
+console.log(person["age"]); //  30
+
+1.如果你的属性名包含空格或以数字开头，你就需要使用方括弧表示法：
+const oddObject = {
+  "1stProperty": "Hello",
+  "property with spaces": "World"
+};
+console.log(oddObject["1stProperty"]);  // Hello
+console.log(oddObject["property with spaces"]);  // World
+
+2.方括弧表示法的另一个优点是它允许你使用变量动态访问属性：
+const person = {
+  name: "Alice",
+  age: 30,
+  city: "Wonderland"
+};
+let propertyName = "city";
+console.log(person[propertyName]); // Wonderland
+
+
+------
+删除属性  delete 操作符
+const person = {
+  name: "Alice",
+  age: 30,
+  job: "Engineer"
+};
+
+delete person.job;
+
+console.log(person.job); // undefined
+
+-----
+使用带有剩余参数的解构赋值
+const person = {
+  name: "Bob",
+  age: 25,
+  job: "Designer",
+  city: "New York"
+};
+
+const { job, city, ...remainingProperties } = person;
+
+// { name: "Bob", age: 25 }
+console.log(remainingProperties);
+
+
+
+-----
+查看对象是否具有特定的属性
+asOwnProperty() 方法、Object.hasOwn() 方法、in 操作符，
+以及与 undefined 的比较
+
+---
+hasOwnProperty()是否有某个属性
+
+const person = {
+  name: "Alice",
+  age: 30
+};
+
+console.log(person.hasOwnProperty("name")); // true
+console.log(person.hasOwnProperty("job")); // false
+
+---
+Object.hasOwn() 是检查对象是否拥有自身（非继承）属性的现代推荐方法
+注意：只检查属性是否存在 值是 0、false、null 或 undefined，它仍然返回 true
+语法：Object.hasOwn(object, propertyName) 对象作为第一个参数，属性名作为第二个参数传入
+
+const person = {
+  name: "Alice",
+  age: 30
+};
+
+console.log(Object.hasOwn(person, "name")); // true
+console.log(Object.hasOwn(person, "job")); // false
+
+
+---
+in 操作符
+const person = {
+  name: "Bob",
+  age: 25
+};
+console.log("name" in person);  // true
+
+---
+查看属性是否为 undefined (有限制，或许不准确)
+const car = {
+  brand: "Toyota",
+  model: "Corolla",
+  year: 2020
+};
+
+console.log(car.brand !== undefined); // true
+console.log(car.color !== undefined); // false
+
+
+
+-------
+处理对象内嵌套对象和数组的复杂数据结构
+const person = {
+  name: "Alice",
+  age: 30,
+  contact: {
+    email: "alice@example.com",
+    phone: {
+      home: "123-456-7890",
+      work: "098-765-4321"
+    }
+  }
+};
+
+1. console.log(person.contact.phone.work); // "098-765-4321"
+2. console.log(person['contact']['phone']['work']); // "098-765-4321"
+
+---
+当对象属性为数组时
+const person = {
+  name: "Alice",
+  age: 30,
+  addresses: [
+    { type: "home", street: "123 Main St", city: "Anytown" },
+    { type: "work", street: "456 Market St", city: "Workville" }
+  ]
+};
+
+console.log(person.addresses[1].city); // "Workville"
+
+
+
+---------
+原语数据类型和非原语数据类型
+
+原语数据类型是 JavaScript 中最简单的数据形式。它们包括 number、bigint、string、boolean、null、undefined 和 symbol。
+这些类型被称为“原语”，因为它们表现单一值且不是对象。
+let num1 = 5;
+let num2 = num1;
+num1 = 10;
+
+console.log(num2); // 5
+//原语值（5）从 num1 赋值到 num2
+
+
+原生类型的数据类型则更复杂。这些是对象，包括普通对象、数组和函数。与原语不同，
+非原生类型可以作为属性或元素包含多值。
+当你创建一个非原生类型值的变量时，存储在变量中的实际上是对象存储的内存位置的引用，而不是对象本身。
+const originalPerson = { name: "John", age: 30 };
+const copiedPerson = originalPerson;
+
+originalPerson.age = 31;
+
+console.log(copiedPerson.age); // 31
+//因为 originalPerson 和 copiedPerson 都在引用内存中的同一个对象。
+//两个变量共享相同的内存位置
+
+
+----
+函数和对象方法有什么区别
+1.调用方式不同
+函数通过其名称调用，而方法通过所属对象上的点符号调用。
+例如，我们调用 greet 函数为 greet("Alice")，
+但调用 sayHello 方法为 person.sayHello()。
+2.运行的上下文
+
+方法有助于将代码组织成逻辑对象，而函数用于更通用的、可重用的代码。
+
+
+
+----
+`Object()` 构造函数 创建和初始化对象的特殊类型函数
+
+使用场景：当你想为一个原语值创建对象包装器时
+const num = 42;
+const numObj = Object(num); // Creates an object wrapper for the number
+
+console.log(numObj);
+console.log(typeof numObj); // "object"
+
+---------
+项目练习
+1.复制一个对象const normalized = {...manifest}
+2.验证数字是否为一个整数!Number.isInteger(manifest.containerId)
+3.判断对象是否有某个属性!manifest.hasOwnProperty('destination')
+4.判断子字符串除去首尾空格是否为空manifest.destination.trim() === ''
+5.判断是不是数字isNaN(manifest.weight)
+
+
+
+——————————————————————
+JSON
+JSON 代表 JavaScript 对象表示法。
+它是一种轻量级、基于文本的数据格式，通常用于在服务器和网页应用之间交换数据。
+由于 JSON 是语言无关的，你可以轻松地将 JSON 数据从 Java 应用发送到 Python 应用，或从 JavaScript 应用发送到 C# 应用
+这是一个 JSON 对象的示例：
+
+{
+  "name": "Alice",
+  "age": 30,
+  "isStudent": false,
+  "list of courses": ["Mathematics", "Physics", "Computer Science"]
+}
+如你所见，JSON 使用密钥-值点对来保存信息，每个点对之间用逗号分隔。每个密钥必须用双引号包裹，否则你将得到一个误差。
+
+
+点符号来访问 JSON 对象中的 age：
+
+import data from "./example.json" with { type: "json" };
+
+console.log(data.age);//它将 JSON 对象导入到这个文件中，以便我们可以访问它
+
+方括弧
+console.log(data["list of courses"]);
+
+
+----
+JSON.parse() 和 JSON.stringify() 
+JSON.stringify() 用于将 JavaScript 对象转换为 JSON 字串。
+当你想以一种可以轻松共享或在系统之间传输的形式保存或传输数据时，这非常有用。
+const user = {
+  name: "John",
+  age: 30,
+  isAdmin: true
+};
+
+const jsonString = JSON.stringify(user);
+console.log(jsonString);
+
+JSON.stringify() 方法还接受一个名为 replacer 的可选参数，该参数可以是一个函数或数组
+const developerObj = {
+  firstName: "Jessica",
+  isAwesome: true,
+  isMusician: true,
+  country: "USA",
+};
+
+// result: {"firstName":"Jessica","country":"USA"}
+console.log(JSON.stringify(developerObj, ["firstName", "country"]));
+
+---
+JSON.parse()将 JSON 字串转换回 JavaScript 对象
+const jsonString = '{"name":"John","age":30,"isAdmin":true}';
+const userObject = JSON.parse(jsonString);
+console.log(userObject);
+
+// Result:
+// { name: 'John', age: 30, isAdmin: true }
+
+
+-----
+可选链操作符 安全地访问对象属性或调用方法，而无需担心它们是否存在
+const user = {
+  name: "John",
+  profile: {
+    email: "john@example.com",
+    address: {
+      street: "123 Main St",
+      city: "Somewhere"
+    }
+  }
+};
+
+console.log(user?.profile?.address?.street); // "123 Main St"
+console.log(user?.profile?.phone?.number);   // undefined
+当你不确定某个属性或方法是否存在时，可选链操作符最为有用。它有助于防止误差，使你的代码更健壮。
+
+
+----
+对象解构
+const person = { name: "Alice", age: 30, city: "New York" };
+
+const { name, age } = person;
+
+console.log(name); // Alice
+console.log(age);  // 30
+
+还可以设定默认值
+let person = { name: "Alice", age: 30, city: "New York" };
+let { name, age, country = "Unknown" } = person;
+
+console.log(country); // Unknown
+
+嵌套解构
+const recipe = {
+  name: "Chocolate Cake",
+  ingredients: {
+    flour: "2 cups",
+    sugar: "1 cup"
+  }
+};
+
+// Extract `flour` from `ingredients`
+const { ingredients: { flour } } = recipe;
+
+console.log(flour); // "2 cups"
+
+函数返回对象或创建具有多个属性的对象时
+function createPerson(name, age) {
+  return { name, age };
+}
+
+let person = createPerson("Charlie", 35);
+console.log(person); // { name: "Charlie", age: 35 }
+
+！！！！！！注意属性之间别忘记写逗号
+
+
+
+——————————————————————
+For...of 循环 循环遍历一个对象的属性时
+
+const numbers = [1, 2, 3, 4, 5];
+
+for (const num of numbers) {
+  console.log(num);
+} //依次打印1,2,3,4,5
+
+-----
+const str = 'freeCodeCamp';
+
+for (let char of str) {
+  console.log(char);
+} //依次打印单个字符
+
+
+-----
+prop 变量表现对象的当前属性。fruit[prop] 用于访问每个属性的值。
+const fruit = {
+  name: 'apple',
+  color: 'red',
+  price: 0.99
+};
+
+for (const prop in fruit) {
+  console.log(fruit[prop]);
+} //依次打印 apple red 0.99
+
+--------
+直接获取数组字符 let...of
+遍历字符串       for...in 
+for (let char in sentence) 会迭代字符串的索引（如 "0", "1", ...），而不是字符本身。
+
+-------
+补充：split()
+/\s+/ 是一个正则表达式，其中：
+ \s 表示任何空白字符，包括空格、制表符（\t）、换行符（\n）等。
+   + 表示一个或多个（前面的 \s 出现至少一次）。
+因此 split(/\s+/) 的作用是：按一个或多个空白字符作为分隔符来拆分字符串。
+
+
+单词计数方法（按空格分割）：
+javascript
+function getWordCount(sentence) {
+    // 去除首尾空格，再按一个或多个空白字符分割
+    const words = sentence.trim().split(/\s+/);
+    // 如果原句子全是空格，words[0] 会是空字符串，此时应返回 0
+    return words[0] === '' ? 0 : words.length;
+}
+
+
+
+单词长度 words[i].length
+
+-----
+练习    交换数组的两个元素
+splice() 方法可以通过在任意位置（包括中间）添加或删除元素来修改数组。
+由于 splice() 返回一个包含被删除元素的数组，你可以使用它在不改变原数组的情况下交换数组中的两个元素。
+
+const originalArray = [12, 97, 68, 55];
+const copyArray = originalArray.slice();
+copyArray[1] = copyArray.splice(3, 1, copyArray[1])[0];
+console.log(copyArray); // [12, 55, 68, 97]
+//splice(3, 1, copyArray[1]) 删除索引为 3 的元素（55）
+
+它将来自 copyArray[1]（97）的元素插入到索引 3。
+
+splice() 返回 [55]，一个包含被移除元素的数组
+
+[0] 从该数组中提取 55
+
+该值（55）被赋值回 copyArray[1]，完成交换
+
+-----------------
+降序排序-冒泡排序 bubble sort
+1.外层循环 记录已经排好的数
+2.内层循环 两个数相比较 索引号不超过数组长度-已排好
+3.进行交换
+
+
+--------------
+从一个 array 中创建大小为 n 的块而不改变它
+将 for 循环与 slice() 方法结合
+
+
+-------
+输出模板字面量
+return ` 内容 `
+
+
+-----
+includes 方法检查的是“完整的连续子串”是否包含
+
+
+
+-------
+返回数组对象的属性值 array[i][property]
+
+-----
+字符串可以直接加
+newString += string
+字符串可以按照索引号直接循环
+
+String.fromCharCode() 是 JavaScript 的一个静态方法
+给它一个数字，它还你一个字母
+
+----
+for...in遍历对象时，获取的是对象的键名（即属性名），而不是属性的值。
+
+
+----
+变量命名
+对于布尔变量和返回布尔值的函数，常见的做法是使用诸如 is、has 或 can 作为前缀
+对于函数 通常以动词开头会很有帮助：
+检索数据的函数时，通常以单词 get 开头：
+设置数据的函数时，通常以单词 set 开头：
+事件处理器函数，你可以在前面加上 handle 或在后面加上 handler：
+数组名称，考虑使用复数名词以表示变量包含多个项：

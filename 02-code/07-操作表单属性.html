@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" value="电脑">
+  <input type="checkbox" name="" id="">
+  <script>
+    //使用场景：密码的显示与隐藏
+
+    //1.获取元素
+    const input = document.querySelector('input');
+    //2.获取值 使用value属性
+    console.log(input.value);
+    //3.修改值
+    input.value = '手机';
+
+    //获取复选框
+    const checkbox = document.querySelector('input[type="checkbox"]');
+    //获取复选框的选中状态
+    console.log(checkbox.checked);
+    //修改复选框的选中状态
+    checkbox.checked = true;
+  </script>
+</body>
+
+</html>

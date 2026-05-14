@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //函数是执行特定任务的代码块
+    //函数=厨子 返回值=点餐人
+    //alert()不需要返回值
+    function fn() {
+      return 1000;
+    }
+    fn(); //fn() = 1000; 1000是返回值
+    let re = fn();//re = 1000;
+    console.log(re);
+
+
+    //求和函数的返回值
+    function getSum(x, y) {
+      return x + y;
+      //return后面不能有代码  return后面代码不执行
+    }
+    let sum = getSum(10, 20);
+    console.log(sum);
+    //返回值可以让其他代码使用函数的结果
+
+    //求函数的最大值
+    function getMax(x, y) {
+      // if (x > y) {
+      //   return x;
+      // } else {
+      //   return y;
+      // }
+      return x > y ? x : y;
+    }
+    let max = getMax(10, 20);
+    console.log(max);
+
+    //求数据组的最大值
+    function getArrMax(arr) {
+      //1.准备一个变量来存储最大值
+      let max = arr[0];
+      //2.遍历数组中的每个元素，和max进行比较，如果比max大，就把这个元素赋值给max
+      for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+          max = arr[i];
+        }
+      }
+      //3.循环结束后，max就是数组中的最大值，返回max
+      return max;
+    }
+    let arr = [10, 20, 30, 40, 50];
+    let arrMax = getArrMax(arr);
+    console.log(arrMax);
+
+  </script>
+</body>
+
+</html>

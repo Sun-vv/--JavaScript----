@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //函数参数
+    //求1-100的和
+    function getSum(start, end)//形参
+    {
+      let sum = 0;
+      for (let i = start; i <= end; i++) {
+        sum += i;
+      }
+      console.log(sum);
+    }
+    getSum(1, 100);//实参 实参传递给形参
+    getSum(10, 101);
+
+    //提高函数的灵活性
+    //参数分为实参，形参。调用实参，声明形参
+
+    //函数求和
+    function getSum1(num1 = 0, num2 = 0) {
+      console.log(num1 + num2);
+    }
+    getSum1(10, 20);
+    // 有参数先传递参数  num1默认undifined 可以默认num1=0; num2=0; 
+    //结果NaN
+
+  </script>
+</body>
+
+</html>

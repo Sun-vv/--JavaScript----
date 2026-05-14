@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      color: rgb(19, 19, 9);
+    }
+
+    .active {
+      color: blue;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">文字哦</div>
+  <script>
+    //1.获取元素
+    const div = document.querySelector('.box');
+    //2.修改元素的样式所有属性
+    div.classList.add('active');
+    //不加点
+
+    //删除
+    //div.classList.remove('active');
+
+    //切换 有就删除 没有就添加
+    //div.classList.toggle('active');
+
+    //classList 不影响之前的类名
+
+    //那么，什么时候你可能想要为你的 DOM 添加或移除节点？
+    //如果你正在处理动态内容，你可能需要从 DOM 中添加或移除节点。现实世界的例子包括购物车、待办事项列表和社交媒体动态。
+
+    //appendChild() 方法用于将节点添加到指定父节点的子节点列表末尾。
+    //以下是 appendChild() 方法的基本语法：
+    //parentNode.appendChild(newNode);
+
+  </script>
+</body>
+
+</html>

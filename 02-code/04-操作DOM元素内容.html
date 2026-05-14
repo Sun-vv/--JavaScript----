@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="box">我是一个文字内容</div>
+  <script>
+    const box = document.querySelector('.box');
+    console.log(box.innerHTML); // 获取文字内容
+    box.innerHTML = '我是新的文字内容'; // 修改文字内容
+
+    //.innerHTML 可以识别标签并修改
+    box.innerHTML = '<h1>我是一个标题</h1>';
+
+    //innerHTML 属性的主要用途是什么？
+    // 动态将超文本标记语言内容注入到元素中。
+
+    //innerText属性返回超文本标记语言元素的可见文本内容，
+    // 不包括任何隐藏文本或隐藏元素内的文本
+
+    //textContent属性返回一个元素的纯文本内容，
+    // 包括所有子元素内的文本，无论其是可见还是隐藏
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  //data-开头的属性叫做自定义属性，作用是存储数据
+  <div data-id="1">1</div>
+  <div data-id="2">2</div>
+  <div data-id="3">3</div>
+  <div data-id="4">4</div>
+  <div data-id="5">5</div>
+  <script>
+    //1.获取元素
+    const one = document.querySelector('div');
+    //2.获取自定义属性的值 使用dataset属性
+    console.log(one.dataset.id); //1
+
+  </script>
+</body>
+
+</html>

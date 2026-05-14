@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button class="box">点击我</button>
+  <script>
+    // 事件：例如用户在网页点击按钮
+    // 监听：程序检测是否发生事件，由一个函数做出响应
+    // 事件监听：鼠标点击显示下拉菜单，点击播放轮播图、
+
+    // 语法
+    // 元素.addEventListener('事件类型'，监听函数)
+    // 三要素：
+    // 1.事件源：哪个元素被触发 如：按钮
+    // 2.事件类型：点击，鼠标移入，鼠标移出，键盘按下，键盘抬起
+    // 3.监听函数：做什么事情，有时间间隔
+
+    //1.获取元素
+    const btn = document.querySelector('button');
+    //2.事件类型
+    btn.addEventListener('click', function () {
+      // alert('hi~');
+      box.style.background = 'red';
+    });//注意：大括号在函数里面
+
+
+  </script>
+</body>
+
+</html>

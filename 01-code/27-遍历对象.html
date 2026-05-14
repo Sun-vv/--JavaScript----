@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //遍历对象 for...in循环
+    let person = {
+      name: '薇薇安',
+      age: 30,
+      city: 'New York',
+
+    };
+    //key键值对
+    for (let key in person) {
+      console.log(key); //输出属性名 'name', 'age', 'city'
+      console.log(person[key]); //输出属性值 '薇薇安', 30, 'New York'
+    }
+  </script>
+</body>
+
+</html>

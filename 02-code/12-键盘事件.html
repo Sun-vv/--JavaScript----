@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text">
+  <script>
+    const input = document.querySelector('input');
+    input.addEventListener('keydown', function () {
+      console.log('按下键盘触发');
+    });
+    input.addEventListener('keyup', function () {
+      console.log('抬起键盘触发');
+    });
+    //键盘事件：keydown，keyup
+
+    //输入文本框事件
+    //input事件：当输入框内容发生改变时触发
+    input.addEventListener('input', function () {
+      console.log('输入事件触发');
+    });
+
+
+    //事件对象：event 鼠标点击时，事件对象包含了鼠标点击的位置，按下的键盘等信息
+    //事件对象：当事件发生时，浏览器会自动创建一个事件对象，并将其作为参数传递给监听函数
+    input.addEventListener('input', function (event) {
+      console.log(event);
+    });
+
+
+    //环境对象 代表事件发生的环境，包含了事件源元素，事件类型等信息 
+    //谁调用this，this就是谁
+    input.addEventListener('input', function (event) {
+      console.log(this); //this===>input元素
+    }); 
+  </script>
+</body>
+
+</html>

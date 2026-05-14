@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text">
+  <script>
+    //语法：
+    //元素.addEventListener('focus'，监听函数) 获得焦点
+    //元素.addEventListener('blur'，监听函数) 失去焦点
+
+    //1.获取元素
+    const input = document.querySelector('input');
+    //2.事件类型
+    input.addEventListener('focus', function () {
+      console.log('有焦点触发');
+
+    });
+    input.addEventListener('blur', function () {
+      console.log('失去焦点触发');
+    });
+  </script>
+</body>
+
+</html>

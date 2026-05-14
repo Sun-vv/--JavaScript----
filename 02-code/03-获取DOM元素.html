@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="box">盒子1</div>
+  <p id="nav">导航</p>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+  <script>
+    //找document里面的一个标签，
+    // document.querySelector() ,
+    // 根据CSS选择器获取单个DOM元素
+
+    // document.querySelectorAll() ,
+    // 根据CSS选择器获取所有DOM元素，返回一个NodeList集合,
+    //伪数组，没有长度，没有索引号，没有增删改查的方法
+    //（）里面的参数是字符串，加‘’
+    //注意：当使用带有字串选择器的 querySelectorAll() 时，如果选择器没有匹配任何元素，会发生什么？
+    // 返回一个空的 NodeList 集合，而不是 null 或 undefined。
+
+    //通过 id 在 JavaScript 中访问元素
+    //getElementById()方法根据元素的 id 属性返回对第一个对象的引用。
+
+
+    //对象.属性 调用方法
+
+    //获取class为box的元素
+    const box = document.querySelector('.box');
+    console.log(box);
+
+    //获取id为nav的元素
+    const nav = document.querySelector('#nav');
+    console.log(nav);
+
+    //获取ul标签第一个li标签
+    const li = document.querySelector('ul li:first-child');
+    console.log(li);
+
+    //获取ul所有li标签
+    const liAll = document.querySelectorAll('ul li');
+    for (let i = 0; i < liAll.length; i++) {
+      console.log(liAll[i]);
+    }
+
+
+
+
+  </script>
+</body>
+
+</html>

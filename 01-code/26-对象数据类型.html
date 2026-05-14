@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //无序数据集合
+
+    //1.声明对象
+    //let 对象名 = {
+    // 属性名(变量名): 属性值,
+    // 方法名: 函数,(在对象外是函数，在对象内是方法)
+    // ...}
+    let person = {
+      name: '薇薇安',
+      age: 30,
+      city: 'New York',
+      greet: function () {
+        console.log('Hello, my name is ' + this.name);
+      }
+    };
+    console.log(person);
+    person.greet(); // 调用 greet 方法
+  </script>
+</body>
+
+</html>
