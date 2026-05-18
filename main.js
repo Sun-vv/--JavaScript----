@@ -1,0 +1,26 @@
+/*2026-5-18
+实现唯一排序并集
+**目标：**实现以下用户需求并通过所有测试以完成实验。
+
+用户故事：
+
+你应该有一个名为 uniteUnique 的函数。
+uniteUnique 函数应接受两个或更多数组作为参数。
+该函数应返回一个新建的数组，包含参数数组中首次出现的唯一值，顺序与它们在参数中首次出现的顺序相同。
+例如，输入 [1, 2, 4], [2, 3, 5] 的输出应为 [1, 2, 4, 3, 5]。*/
+
+function uniteUnique(...arrays) {
+  const result = [];
+  const seen = new Set();
+
+  for (const arr of arrays) {
+    for (const val of arr) {
+      if (!seen.has(val)) {
+        seen.add(val);
+        result.push(val);
+      }
+    }
+  }
+
+  return result;
+}
