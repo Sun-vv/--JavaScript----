@@ -803,3 +803,13 @@ function sum(...Arrays){}
 例sum([1,2],[3,4]) ==> Arrays([[1,2],[3,4]])
 2.pop()不接受任何参数，删除数组最后一个元素并返回该元素
 3. .has方法 用于检查集合对象是否存在某个值
+
+------
+2026-5-19
+1.怎么生成随机字符?
+定义一个字符集，利用Math.floor(Math.random()*length)生成索引号，赋值给新字符串
+2.比较两个数的max,min
+Math.max(a,b)
+Math.min(a,b)
+3.怎么只替换字符串中特定的字符而不改变原来的顺序？
+将字符逐个遍历，创建一个新数组[]，利用switch(char){case  :  ;break  default:  ;}替换单个字符，剩余的默认push到数组
